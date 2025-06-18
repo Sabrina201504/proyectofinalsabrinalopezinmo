@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabrina López Propiedades</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabrina López Propiedades</title>
+  <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
@@ -17,33 +17,116 @@
     </div>
       <nav>
       <ul>
-        <a href="../index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="propiedades.html">Propiedades</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
-
+        
+       <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="propiedades.html">Propiedades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       
        
       </ul>
     </nav>
   </header>
-    
-<main class="nosotros">
-  <section class="equipo">
-    <img src="../images/equipo.jpg" alt="Nuestro equipo">
-  </section>
 
-  <section class="descripcion">
-    <div class="acerca">
-      <h3>Acerca de nosotros</h3>
-      <p>Somos una empresa innovadora, dinámica y comprometida con sus clientes.</p>
-      <p>Desde 2011 estamos entre las inmobiliarias líderes y más recomendadas de la zona por nuestro profesionalismo y compromiso.</p>
-    </div>
-    <div class="contacto">
-      <h3>Contacto</h3>
-      <p><strong>info@sabrinalopez.com.ar</strong><br>Av. Siempreviva 123<br>+54 9 11 4567 3751</p>
-    </div>
-  </section>
-</main>
+  
+  <main>
+
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="contenido-hero">
+        <h1>TU PROPIEDAD CERCA DEL MAR</h1>
+
+        <div class="tipo-operacion">
+          <button id="btn-venta" class="activo">Venta</button>
+          <button id="btn-alquiler">Alquiler</button>
+        </div>
+
+        <form class="buscador">
+          <select>
+            <option disabled selected>Tipo de propiedad</option>
+            <option>Departamento</option>
+            <option>Terreno</option>
+            <option>Casa</option>
+            <option>Locales</option>
+            <option>Campo</option>
+            <option>Cochera</option>
+          </select>
+
+          <div class="input-con-icono">
+            <input type="text" placeholder="Buscar por ubicación, dirección o calle">
+            <span class="icono-lupa">🔍</span>
+          </div>
+
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="propiedades">
+      <h2>Propiedades destacadas</h2>
+
+      <div class="grid-propiedades">
+
+        <article class="tarjeta">
+          <img src="images/departamento1.jpg" alt="Departamento en venta">
+          <div class="contenido-tarjeta">
+            <h3>Departamento 2 ambientes</h3>
+            <p>Zona Centro, Mar del Plata</p>
+            <span class="precio">USD 65.000</span>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="images/casa1.jpg" alt="Casa en venta">
+          <div class="contenido-tarjeta">
+            <h3>Casa 4 ambientes</h3>
+            <p>Zona Constitución, patio y cochera</p>
+            <span class="precio">USD 120.000</span>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="images/local1.jpg" alt="Local comercial">
+          <div class="contenido-tarjeta">
+            <h3>Local en alquiler</h3>
+            <p>Av. Independencia, 60 m²</p>
+            <span class="precio">$ 300.000</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <a href="https://wa.me/1133623531" class="whatsapp" target="_blank">💬</a>
+  <div class="chat-ayuda">🗨️</div>
+
+  <script>
+    const btnVenta = document.getElementById("btn-venta");
+    const btnAlquiler = document.getElementById("btn-alquiler");
+
+    btnVenta.addEventListener("click", () => {
+      btnVenta.classList.add("activo");
+      btnAlquiler.classList.remove("activo");
+    });
+
+    btnAlquiler.addEventListener("click", () => {
+      btnAlquiler.classList.add("activo");
+      btnVenta.classList.remove("activo");
+    });
+  </script>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
 </html>

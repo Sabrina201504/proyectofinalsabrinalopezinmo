@@ -1,91 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabrina López Propiedades</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicios - Sabrina López</title>
   <link rel="stylesheet" href="../style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <header>
-    
-    <div class="logo">
+   <div class="logo">
       Sabrina López<span class="dominio">.com.ar</span>
     </div>
       <nav>
 
-
-     <ul>
-        <a href="../index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="propiedades.html">Propiedades</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
+      <ul>
+         <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="propiedades.html">Propiedades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+
+
+
   </header>
 
-  <main class="contenido-servicios">
+  <main>
     <section class="intro-servicios">
-      <h1>Nuestros Servicios</h1>
-      <p>Asesoramiento completo para venta, compra y alquiler de propiedades. Nos encargamos de cada detalle para que tu operación sea segura, rápida y transparente.</p>
+      <h2>Nuestros Servicios</h2>
+      <p>Brindamos atención personalizada en cada etapa del proceso inmobiliario. Nuestro objetivo es lograr operaciones exitosas y transparentes.</p>
     </section>
 
-      <div class="servicio-card">
-        <img src="../images/vendedor.jpg" alt="Servicio de ventas"/>
-          <div class="servicio-texto">
-        <h3>Ventas</h3>
-        <p>Te acompañamos en todo el proceso de venta de tu propiedad, desde la tasación hasta la firma. Generamos máxima visibilidad para lograr resultados reales.</p>
+    <section class="lista-servicios">
+      <div class="servicio">
+        <img src="../images/equipo.jpg" alt="Asesoramiento">
+        <h3>Asesoramiento personalizado</h3>
+        <p>Te acompañamos en cada paso para que tomes decisiones seguras.</p>
       </div>
 
-      <div class="servicio-card">
-        <img src="../images/alquileres.jpg" alt="Alquileres"/>
-        <div class="servicio-texto">
-        <h3>Alquileres</h3>
-        <p>Administramos alquileres residenciales y comerciales. Control, seguimiento y atención directa con inquilinos y propietarios.</p>
+      <div class="servicio">
+        <img src="../images/tasaciones.jpg" alt="tasación">
+        <h3>Tasaciones profesionales</h3>
+        <p>Valoramos tu propiedad de forma objetiva y actualizada.</p>
       </div>
 
-      <div class="servicio-card">
-        <img src="../images/tasaciones.jpg" alt="Tasaciones"/>
-        <div class="servicio-texto"></div>
-        <h3>Tasaciones</h3>
-        <p>Valoramos tu propiedad con criterios reales de mercado. Confiabilidad y experiencia para obtener un precio justo y competitivo.</p>
-      </div>
-
-      <div class="servicio-card">
-        <img src="../images/inversiones.jpg" alt="Inversiones"/>
-        <div class="servicio-texto">
-        <h3>Inversiones</h3>
-        <p>Asesoramos en oportunidades de inversión inmobiliaria en zonas estratégicas: lotes, viviendas y emprendimientos.</p>
+      <div class="servicio">
+        <img src="../images/inversiones.jpg" alt="Gestión">
+        <h3>Gestión integral</h3>
+        <p>Nos encargamos de toda la documentación y trámites legales.</p>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-info">
-        <p><strong>Sabrina López Propiedades</strong></p>
-        <p>Desde 2011 entre las inmobiliarias líderes y más recomendadas de la zona por profesionalismo y compromiso.</p>
-        
-      </div>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-links');
 
-      <div class="footer-contacto">
-        <p><strong>Contacto</strong></p>
-        <p>info@sabrinalopez.com.ar</p>
-        <p>Av. Siempreviva 123</p>
-        <p>+54 9 11 4567 3751</p>
-      </div>
-
-         </div>
-
-    <div class="footer-legal">
-      <p>© 2025 Sabrina López Propiedades</p>
-      <p>Todas las medidas enunciadas son meramente orientativas y no contractuales.</p>
-    </div>
-  </footer>
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
 
 </body>
 </html>

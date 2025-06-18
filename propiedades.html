@@ -1,124 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabrina López Propiedades</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Propiedades - Sabrina López</title>
   <link rel="stylesheet" href="../style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <header>
-    
     <div class="logo">
       Sabrina López<span class="dominio">.com.ar</span>
     </div>
-      <nav>
-
+    <nav>
       <ul>
-        <a href="../index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="propiedades.html">Propiedades</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="propiedades.html" class="activo">Propiedades</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  
-  
-  <main class="propiedades-page">
-    <aside class="filtros">
-      <h2>Filtrar</h2>
+  <main>
+    <section class="propiedades-page">
+      <aside class="filtros">
+        <h3>Filtrar</h3>
 
-      <label for="tipo">Tipo de Propiedad</label>
-      <select id="tipo">
-        <option>Departamento</option>
-        <option>Casa</option>
-        <option>Terreno</option>
-        <option>Local</option>
-        <option>Cochera</option>
-      </select>
+        <label for="tipo">Tipo de propiedad:</label>
+        <select id="tipo" name="tipo">
+          <option value="">Todos</option>
+          <option value="casa">Casa</option>
+          <option value="departamento">Departamento</option>
+          <option value="lote">Lote</option>
+          <option value="local">Local</option>
+        </select>
 
-      <label for="ubicacion">Ubicación</label>
-      <input type="text" id="ubicacion" placeholder="Buscar barrio o calle" />
+        <label for="ambientes">Ambientes:</label>
+        <select id="ambientes" name="ambientes">
+          <option value="">Todos</option>
+          <option value="1">1 ambiente</option>
+          <option value="2">2 ambientes</option>
+          <option value="3">3 ambientes</option>
+          <option value="4">4 o más</option>
+        </select>
 
-      <label>Rango de precio</label>
-      <div class="moneda">
-        <input type="radio" id="ars" name="moneda" checked /><label for="ars">ARS</label>
-        <input type="radio" id="usd" name="moneda" /><label for="usd">USD</label>
-      </div>
-      <input type="number" placeholder="Desde" />
-      <input type="number" placeholder="Hasta" />
-      <button class="btn-aplicar">Aplicar</button>
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" placeholder="Ej: Constitución">
 
-      <label for="ambientes">Ambientes</label>
-      <select id="ambientes">
-        <option>1 ambiente</option>
-        <option>2 ambientes</option>
-        <option>3 ambientes</option>
-        <option>4 o más</option>
-      </select>
-    </aside>
+        <label for="precio">Rango de precio:</label>
+        <input type="text" id="precio" placeholder="Ej: 100000 - 200000">
 
-    <section class="listado-propiedades">
-      <h2>Propiedades disponibles</h2>
+        <button class="btn-filtro">Aplicar filtros</button>
+      </aside>
 
-      <article class="card-propiedad">
-        <img src="https://media.istockphoto.com/id/1407202319/es/foto/render-3d-de-la-sala-de-estar-y-comedor-interior-del-apartamento.webp?a=1&b=1&s=612x612&w=0&k=20&c=vq85hN9f5HyUoFumTooL9N6wofwZMBEjcMOGjej1lBE=" alt="">
-        <div class="info">
-          <h3>USD 65.000</h3>
-          <p><strong>Departamento</strong> - Zona Centro</p>
-          <p>2 ambientes. Excelente ubicación a metros del mar.</p>
-          <small>Ref. SL001</small>
+      <section class="listado-propiedades">
+        <div class="tarjeta" data-tipo="departamento" data-ambientes="2" data-ubicacion="centro" data-precio="65000">
+          <img src="../images/departamento1.jpg" alt="Departamento">
+          <div class="info">
+            <h3>Departamento 2 Ambientes</h3>
+            <p>Zona Centro</p>
+            <strong>USD 65.000</strong>
+          </div>
         </div>
-      </article>
 
-      <article class="card-propiedad">
-        <img src="https://images.unsplash.com/photo-1708901141722-d5b0583407b9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGludGVyaW9yJTIwbG9jYWwlMjBjb21lcmNpYWx8ZW58MHx8MHx8fDA%3D" alt="Imagen propiedad 2" />
-        <div class="info">
-          <h3>$ 300.000</h3>
-          <p><strong>Local</strong> - Av. Independencia</p>
-          <p>60 m², frente vidriado, zona comercial activa.</p>
-          <small>Ref. SL002</small>
+        <div class="tarjeta" data-tipo="casa" data-ambientes="4" data-ubicacion="constitucion" data-precio="120000">
+          <img src="../images/casa1.jpg" alt="Casa">
+          <div class="info">
+            <h3>Casa 4 Ambientes</h3>
+            <p>Constitución - Patio y Cochera</p>
+            <strong>USD 120.000</strong>
+          </div>
         </div>
-      </article>
 
-      <article class="card-propiedad">
-        <img src="https://images.unsplash.com/photo-1614678224008-4df9841f292c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FzYSUyMDQlMjBhbWJpZW50ZXMlMjBjb24lMjBqYXJkaW58ZW58MHx8MHx8fDA%3D" alt="Imagen propiedad 3" />
-        <div class="info">
-          <h3>USD 120.000</h3>
-          <p><strong>Casa</strong> - Barrio Constitución</p>
-          <p>4 ambientes, patio y cochera. Excelente estado.</p>
-          <small>Ref. SL003</small>
+        <div class="tarjeta" data-tipo="lote" data-ambientes="1" data-ubicacion="recoleta" data-precio="350000">
+          <img src="../images/lote.jpg" alt="Lote">
+          <div class="info">
+            <h3>Lote 600 m²</h3>
+            <p>Recoleta - Ideal inversión</p>
+            <strong>USD 350.000</strong>
+          </div>
         </div>
-      </article>
+
+        <div class="tarjeta" data-tipo="local" data-ambientes="1" data-ubicacion="boedo" data-precio="300000">
+          <img src="../images/local1.jpg" alt="Local">
+          <div class="info">
+            <h3>Local en Alquiler</h3>
+            <p>Av. Independencia 3500 - 60 m²</p>
+            <strong>$ 300.000</strong>
+          </div>
+        </div>
+      </section>
     </section>
   </main>
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-info">
-      <p><strong>Sabrina López Propiedades</strong></p>
-      <p>Desde 2011 entre las inmobiliarias líderes y más recomendadas de la zona por profesionalismo y compromiso.</p>
-     
-    </div>
 
-    <div class="footer-contacto">
-      <p><strong>Contacto</strong></p>
-      <p>info@sabrinalopez.com.ar</p>
-      <p>Av. Siempreviva 123 </p>
-      <p>+54 9 11 4567 3751</p>
-    </div>
+  <script>
+    document.querySelector(".btn-filtro").addEventListener("click", function () {
+      const tipo = document.getElementById("tipo").value.toLowerCase();
+      const ambientes = document.getElementById("ambientes").value;
+      const ubicacion = document.getElementById("ubicacion").value.toLowerCase();
+      const precioInput = document.getElementById("precio").value;
 
-   
+      let precioMin = 0;
+      let precioMax = Infinity;
 
-  <div class="footer-legal">
-    <p>© 2025 Sabrina López Propiedades</p>
-    <p>Todas las medidas enunciadas son meramente orientativas y no contractuales.</p>
-  </div>
-</footer>
+      if (precioInput.includes("-")) {
+        const partes = precioInput.split("-");
+        precioMin = parseInt(partes[0].trim()) || 0;
+        precioMax = parseInt(partes[1].trim()) || Infinity;
+      }
+
+      const tarjetas = document.querySelectorAll(".tarjeta");
+
+      tarjetas.forEach((tarjeta) => {
+        const tipoProp = tarjeta.getAttribute("data-tipo").toLowerCase();
+        const ambProp = tarjeta.getAttribute("data-ambientes");
+        const ubiProp = tarjeta.getAttribute("data-ubicacion").toLowerCase();
+        const precioProp = parseInt(tarjeta.getAttribute("data-precio"));
+
+        const coincideTipo = tipo === "" || tipo === tipoProp;
+        const coincideAmb = ambientes === "" || ambientes === ambProp || (ambientes === "4" && parseInt(ambProp) >= 4);
+        const coincideUbi = ubicacion === "" || ubiProp.includes(ubicacion);
+        const coincidePrecio = isNaN(precioProp) || (precioProp >= precioMin && precioProp <= precioMax);
+
+        if (coincideTipo && coincideAmb && coincideUbi && coincidePrecio) {
+          tarjeta.style.display = "block";
+        } else {
+          tarjeta.style.display = "none";
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
